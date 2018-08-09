@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Titulo:</strong>
+  <%= @dado.titulo %>
+</p>
+
+<p>
+  <strong>Foto:</strong>
+  <%= @dado.foto %>
+</p>
+
+<p>
+  <strong>Descricao:</strong>
+  <%= @dado.descricao %>
+</p>
+
+<p>
+  <strong>Recompensa:</strong>
+  <%= @dado.recompensa %>
+</p>
+
+<p>
+  <strong>Tipo:</strong>
+  <%= @dado.tipo %>
+</p>
+
+<p>
+  <strong>Dataocorrido:</strong>
+  <%= @dado.dataocorrido %>
+</p>
+
+<p>
+  <strong>Pessoa:</strong>
+  <%= @dado.pessoa %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @dado.status %>
+</p>
+
+<%= link_to 'Edit', edit_dado_path(@dado) %> |
+<%= link_to 'Back', dados_path %>

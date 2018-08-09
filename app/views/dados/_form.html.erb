@@ -1,0 +1,57 @@
+<%= form_with(model: dado, local: true) do |form| %>
+  <% if dado.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(dado.errors.count, "error") %> prohibited this dado from being saved:</h2>
+
+      <ul>
+      <% dado.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :titulo %>
+    <%= form.text_field :titulo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :foto %>
+    <%= form.text_field :foto %>
+  </div>
+
+  <div class="field">
+    <%= form.label :descricao %>
+    <%= form.text_area :descricao %>
+  </div>
+
+  <div class="field">
+    <%= form.label :recompensa %>
+    <%= form.text_field :recompensa %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tipo %>
+    <%= form.text_field :tipo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dataocorrido %>
+    <%= form.date_select :dataocorrido %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pessoa %>
+    <%= form.text_field :pessoa %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.check_box :status %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

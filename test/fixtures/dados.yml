@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  titulo: MyString
+  foto: MyString
+  descricao: MyText
+  recompensa: MyString
+  tipo: MyString
+  dataocorrido: 2018-08-09
+  pessoa: MyString
+  status: false
+
+two:
+  titulo: MyString
+  foto: MyString
+  descricao: MyText
+  recompensa: MyString
+  tipo: MyString
+  dataocorrido: 2018-08-09
+  pessoa: MyString
+  status: false

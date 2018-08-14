@@ -9,6 +9,8 @@ gem 'rails', '~> 5.2.0'
 gem 'pg'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
+# Use jquery as the JavaScript library
+gem 'jquery-rails'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -60,3 +62,41 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem "jquery-ui-rails"
+
+# https://github.com/twbs/bootstrap-sass
+gem 'bootstrap-sass', '3.2.0.2'
+
+# DOC: https://github.com/maxim/bootswatch-rails
+# Styles: https://bootswatch.com/paper/
+gem "bootswatch-rails"
+
+# https://github.com/bokmann/font-awesome-rails
+gem "font-awesome-rails"
+
+# JavaScript Rails Routes
+# https://github.com/railsware/js-routes
+gem "js-routes"
+
+# Paginate
+# https://github.com/mislav/will_paginate
+gem 'will_paginate'
+
+# Para alterar as imagens enviadas
+# https://github.com/minimagick/minimagick
+gem 'carrierwave'
+gem 'mini_magick'
+
+# Para trabalhar com o tinymce
+# DOC - http://www.rubydoc.info/gems/tinymce-rails/4.3.0
+gem 'tinymce-rails'
+gem 'tinymce-rails-langs'
+
+# Para gerar Sitemap Automaticamente
+# DOC - https://github.com/kjvarga/sitemap_generator
+gem 'sitemap_generator'
+
+# Para URL amigáveis
+# https://github.com/norman/friendly_id
+gem 'friendly_id', '~> 5.1.0'

@@ -1,41 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Dados</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Titulo</th>
-      <th>Foto</th>
-      <th>Descricao</th>
-      <th>Recompensa</th>
-      <th>Tipo</th>
-      <th>Dataocorrido</th>
-      <th>Pessoa</th>
-      <th>Status</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<div class="container">
+  <!-- Example row of columns -->
+  <div class="row">
     <% @dados.each do |dado| %>
-      <tr>
-        <td><%= dado.titulo %></td>
-        <td><%= dado.foto %></td>
-        <td><%= dado.descricao %></td>
-        <td><%= dado.recompensa %></td>
-        <td><%= dado.tipo %></td>
-        <td><%= dado.dataocorrido %></td>
-        <td><%= dado.pessoa %></td>
-        <td><%= dado.status %></td>
-        <td><%= link_to 'Show', dado %></td>
-        <td><%= link_to 'Edit', edit_dado_path(dado) %></td>
-        <td><%= link_to 'Destroy', dado, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+    <%= render "/dados/card", dado:dado %>
     <% end %>
-  </tbody>
-</table>
+  </div>
 
-<br>
+  <hr>
 
-<%= link_to 'New Dado', new_dado_path %>
+  <footer>
+    <p>&copy; 2016 Company, Inc.</p>
+  </footer>
+  </div> <!-- /container -->

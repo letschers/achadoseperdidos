@@ -4,7 +4,16 @@ class DadosController < ApplicationController
   # GET /dados
   # GET /dados.json
   def index
-    @dados = Dado.all
+    
+    if params[:tipo].nil? 
+      @dados = Dado.all
+    else 
+      @dados = Dado.where(tipo: params[:tipo])
+    end 
+
+    
+
+
   end
 
   # GET /dados/1
@@ -71,4 +80,4 @@ class DadosController < ApplicationController
     def dado_params
       params.require(:dado).permit(:titulo, :foto, :descricao, :recompensa, :tipo, :dataocorrido, :pessoa, :status)
     end
-end
+  end

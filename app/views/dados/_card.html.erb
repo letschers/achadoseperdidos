@@ -1,9 +1,13 @@
 <div class="col-md-4">
-	<div class="panel panel-default">
+	<div class="panel panel-primary">
+		<div class="panel-heading">
+			<h4 class="panel-title"><%= dado.titulo.upcase %></h4>
+		</div>
 		<div class="panel-body">
-			<h2><%=image_tag dado.foto.to_s, size: "270"=%></h2>
-			<p>Título:<%= dado.titulo %><br /> Recompensa: <%= dado.recompensa%> <br /> Descrição: <%= dado.descricao %> </p>
-			<p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+			<h2><%=image_tag dado.foto.thumb.to_s %></h2>
+			<h6>Recompensa: <%= dado.recompensa%></h6>
+			<h6>Descrição: <%= truncate(dado.descricao, length: 30) %></h6>
+			<%= link_to("Veja Mais", dado, {class: "btn btn-danger"}) %>
 		</div>
 	</div>
 </div>

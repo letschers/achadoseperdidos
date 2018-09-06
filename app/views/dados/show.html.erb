@@ -1,44 +1,25 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Titulo:</strong>
-  <%= @dado.titulo %>
-</p>
-
-<p>
-  <strong>Foto:</strong>
-  <%= @dado.foto %>
-</p>
-
-<p>
-  <strong>Descricao:</strong>
-  <%= @dado.descricao %>
-</p>
-
-<p>
-  <strong>Recompensa:</strong>
-  <%= @dado.recompensa %>
-</p>
-
-<p>
-  <strong>Tipo:</strong>
-  <%= @dado.tipo %>
-</p>
-
-<p>
-  <strong>Dataocorrido:</strong>
-  <%= @dado.dataocorrido %>
-</p>
-
-<p>
-  <strong>Pessoa:</strong>
-  <%= @dado.pessoa %>
-</p>
-
-<p>
-  <strong>Status:</strong>
-  <%= @dado.status %>
-</p>
-
-<%= link_to 'Edit', edit_dado_path(@dado) %> |
-<%= link_to 'Back', dados_path %>
+<div class="col-md-6 col-md-offset-3">
+	<div class="panel panel-primary">
+		<div class="panel-heading">
+			<h4 class="panel-title"><%= @dado.titulo.upcase %></h4>
+		</div>
+		<div class="panel-body">
+			<h2 class="text-center">
+				<%= link_to(@dado.foto.to_s, target: :_blank) do |l| %>
+				<%=image_tag @dado.foto.thumb.to_s %>
+				<% end %>
+			</h2>
+			<h6>Recompensa: <%= @dado.recompensa%></h6>
+			<h6>Descrição: <%= @dado.descricao %></h6>
+			<h6>Tipo: <%= @dado.tipo %></h6>
+			<h6>Data Ocorrido: <%= @dado.dataocorrido %></h6>
+			<h6>Requerente: <%= @dado.pessoa %></h6>
+			<h6>Status: <%= @dado.status_text %></h6>
+		</div>
+		<div class="panel-footer text-center"><%= link_to('Editar', edit_dado_path(@dado), {class: "btn btn-danger"}) %> 
+			<%= link_to('Voltar', dados_path, {class: "btn btn-success"}) %>
+		</div>
+	</div>
+</div>

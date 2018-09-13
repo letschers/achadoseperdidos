@@ -6,6 +6,12 @@ class Dado < ApplicationRecord
 	validates :tipo, presence: true, acceptance: {accept: ['achado', 'perdido']} 
 	validate :valid_date?
 	validates :foto, presence: true, null: false
+	validates :descricao, length: {
+		minimum: 20,
+		maximum: 200,
+
+		too_short: "curta demais!",
+		too_long: "longa demais"}
 
 	def valid_date?
 		if !self.dataocorrido.present? or self.dataocorrido > Date.today

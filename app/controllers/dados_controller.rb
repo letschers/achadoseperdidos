@@ -3,17 +3,20 @@ class DadosController < ApplicationController
 
   # GET /dados
   # GET /dados.json
-  def index
-    
-    if params[:tipo].nil? 
-      @dados = Dado.all
-    else 
-      @dados = Dado.where(tipo: params[:tipo])
-    end 
+  def index   
+    @dados = Dado.all
+  end
 
-    
+  def achados
+    @dados = Dado.where(tipo: "achado")
 
+    render 'index'
+  end
 
+  def perdidos  
+    @dados = Dado.where(tipo: "perdido") 
+  
+    render 'index'
   end
 
   # GET /dados/1

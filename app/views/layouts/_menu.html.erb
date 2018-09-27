@@ -19,15 +19,15 @@
     <div class="collapse navbar-collapse pull-right" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="<%= menuActive(new_dado_path) %>">
-          <%= link_to 'Novo', new_dado_path %> <span class="sr-only">(current)</span></li>
+          <%= link_to t(:new), new_dado_path %> <span class="sr-only">(current)</span></li>
           <li class="<%= menuActive(achados_path) %>">
-            <%= link_to 'Achados',achados_path %>
+            <%= link_to t(:achados),achados_path %>
           </li>
           <li class="<%= menuActive(perdidos_path) %>"> 
-            <%= link_to 'Perdidos', perdidos_path %> 
+            <%= link_to t(:perdidos), perdidos_path %> 
           </li>
           <li class="<%= menuActive(login_path) %>"> 
-            <%= link_to 'Login', login_path %> 
+            <%= link_to t(:login), login_path %> 
           </li>
 
         </ul>

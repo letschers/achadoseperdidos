@@ -5,9 +5,9 @@
 		</div>
 		<div class="panel-body">
 			<h2><%=image_tag dado.foto.thumb.to_s %></h2>
-			<h6>Recompensa: <%= dado.recompensa%></h6>
-			<h6>Descrição: <%= truncate(dado.descricao, length: 30) %></h6>
-			<%= link_to("Veja Mais", dado, {class: "btn btn-danger"}) %>
+			<h6> <%= t(:reward) %>: <%= dado.recompensa%></h6>
+			<h6> <%= t(:description) %>: <%= truncate(dado.descricao, length: 30) %></h6>
+			<%= link_to(t(:seeMore), dado, {class: "btn btn-danger"}) %>
 		</div>
 	</div>
 </div>

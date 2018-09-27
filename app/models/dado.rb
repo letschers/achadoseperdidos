@@ -23,10 +23,9 @@ class Dado < ApplicationRecord
 
 	def status_text
 		if self.status == true 
-			return "Em Aberto"
+			"emaberto"
 		else 
-			return "Fechado"
+			"fechado"
 		end 
 	end
 end 
-	

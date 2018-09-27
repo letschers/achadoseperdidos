@@ -1,7 +1,7 @@
 <%= form_with(model: dado, local: true, html: {class: "form-horizontal"}) do |form| %>
 <% if dado.errors.any? %>
 <div id="error_explanation">
-  <h2><%= pluralize(dado.errors.count, "error") %> prohibited this dado from being saved:</h2>
+  <h2> <%= t(:errorCreating) %> </h2>
 
   <ul>
     <% dado.errors.full_messages.each do |message| %>
@@ -13,7 +13,7 @@
 
 <div class="panel-body" >
   <div class="form-group">
-    <%= form.label :titulo, "Título", class: "col-lg-2 control-label" %>
+    <%= form.label :titulo, t(:title), class: "col-lg-2 control-label" %>
     <div class="col-lg-10">
       <%= form.text_field :titulo %>
     </div>
@@ -21,46 +21,46 @@
 
 <div class="panel-body" >
   <div class="form-group">
-    <%= form.label :recompensa, "Recompensa", class: "col-lg-2 control-label" %>
+    <%= form.label :recompensa, t(:reward), class: "col-lg-2 control-label" %>
     <div class="col-lg-10">
       <%= form.text_field :recompensa %>
     </div>
   </div>
 
   <div class="form-group">
-    <%= form.label :foto, "Foto", class: "col-lg-2 control-label" %>
+    <%= form.label :foto, t(:photo), class: "col-lg-2 control-label" %>
     <div class="col-lg-10">
      <%= form.file_field :foto %>
    </div>
  </div>
 
  <div class="form-group">
-  <%= form.label :descricao, "Descrição", class: "col-lg-2 control-label" %>
+  <%= form.label :descricao, t(:description), class: "col-lg-2 control-label" %>
   <div class="col-lg-10">
     <%= form.text_area :descricao %>
   </div>
 </div>
 
 <div class="form-group">
- <%= form.label :tipo, "Tipo", class: "col-lg-2 control-label" %>
+ <%= form.label :tipo, t(:type), class: "col-lg-2 control-label" %>
  <div class="col-lg-10">
   <div class="radio">
     <%= form.label :tipo do %>
     <%= form.radio_button :tipo, 'achado', checked: false %>
-    Achado
+    <%= t(:achado) %>
     <% end %>
   </div>
   <div class="radio">
     <%= form.label :tipo do %>
     <%= form.radio_button :tipo, 'perdido', checked: false %>
-    Perdido
+    <%= t(:perdido) %>
     <% end %>
   </div>
 </div>
 </div>
 
 <div class="form-group">
-  <%= form.label :data, "Data", class: "col-lg-2 control-label" %>
+  <%= form.label :dataocorrido, t(:dateOcurred), class: "col-lg-2 control-label" %>
   <div class="col-lg-10">
     <%= form.date_select :dataocorrido, {}, {class: "form-control col-md-1", style: 'width: 20%; margin-right: 5px;'} %>
   </div>
@@ -75,13 +75,13 @@
 <div class="form-group">
   <div class="col-lg-10 col-lg-offset-2">
     <% if @dado.persisted? %>
-    <%= form.submit('Editar', class: 'btn btn-danger') %>
+    <%= form.submit(t(:edit), class: 'btn btn-danger') %>
 
     <% else %>
-    <%= form.submit('Criar', class: 'btn btn-danger') %>
+    <%= form.submit(t(:create), class: 'btn btn-danger') %>
 
     <% end %>
-    <%= link_to 'Voltar', dados_path, class: "btn btn-success" %>
+    <%= link_to(t(:back), dados_path, class: "btn btn-success") %>
   </div>
 </div>
 

@@ -30,4 +30,26 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+
   hello: "Hello world"
+  title: "Title"
+  reward: "Reward"
+  description: "Description"
+  achado: "Founded"
+  perdido: "Lost"
+  type: "Type"
+  dateOcurred: "Date of Occurrence"
+  applicant: "Applicant"
+  stat: "Status"
+  emaberto: "Opened"
+  fechado: "Closed"
+  seeMore: "See More"
+  new: "New"
+  photo: "Picture"
+  achados: "Found"
+  perdidos: "Lost"
+  login: "Login"
+  edit: "Edit"
+  back: "Back"
+  create: "Create"
+  errorCreating: "There were some errors in completing the fields:"

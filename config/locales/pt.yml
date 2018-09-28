@@ -223,31 +223,28 @@ pt:
       short: "%d de %B, %H:%M"
     pm: ''
 
-  info:
-    title: "Título"
-    reward: "Recompensa"
-    description: "Descrição"
-    achado: "Achado"
-    perdido: "Perdido"
-    type: "Tipo"
-    dateOcurred: "Data do Ocorrido"
-    applicant: "Requerente"
-    stat: "Status"
-    photo: "Foto"
+  title: "Título"
+  reward: "Recompensa"
+  description: "Descrição"
+  achado: "Achado"
+  perdido: "Perdido"
+  type: "Tipo"
+  dateOcurred: "Data do Ocorrido"
+  applicant: "Requerente"
+  stat: "Status"
+  photo: "Foto"
 
   emaberto: "Em aberto"
   fechado: "Fechado"
 
-  buttons:
-    seeMore: "Veja Mais"
-    edit: "Editar"
-    back: "Voltar"
-    create: "Criar"
+  seeMore: "Veja Mais"
+  edit: "Editar"
+  back: "Voltar"
+  create: "Criar"
 
-  navbarButtons:
-    new: "Novo"
-    achados: "Achados"
-    perdidos: "Perdidos"
-    login: "Login"
+  new: "Novo"
+  achados: "Achados"
+  perdidos: "Perdidos"
+  login: "Login"
 
   errorCreating: "Houveram alguns erros no preenchimento dos campos:"

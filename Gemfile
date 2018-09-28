@@ -103,3 +103,6 @@ gem 'sitemap_generator'
 # Para URL amigáveis
 # https://github.com/norman/friendly_id
 gem 'friendly_id', '~> 5.1.0'
+
+gem 'faraday'
+gem 'faraday_middleware'

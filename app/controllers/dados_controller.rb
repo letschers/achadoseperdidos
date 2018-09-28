@@ -1,6 +1,7 @@
 class DadosController < ApplicationController
   before_action :set_dado, only: [:show, :edit, :update, :destroy]
 
+  include Ifosorioapi
   # GET /dados
   # GET /dados.json
   def index   
@@ -15,13 +16,17 @@ class DadosController < ApplicationController
 
   def perdidos  
     @dados = Dado.where(tipo: "perdido") 
-  
+
     render 'index'
   end
 
   # GET /dados/1
   # GET /dados/1.json
   def show
+    
+    a = doLogin('mestre.yoda', 'Labrun00')
+    
+    binding.pry
   end
 
   # GET /dados/new

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_09_134443) do
+ActiveRecord::Schema.define(version: 2018_09_28_145106) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,10 +22,20 @@ ActiveRecord::Schema.define(version: 2018_08_09_134443) do
     t.string "recompensa", null: false
     t.string "tipo", null: false
     t.date "dataocorrido", null: false
-    t.string "pessoa", null: false
     t.boolean "status", default: true, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "usuarios_id"
+    t.index ["usuarios_id"], name: "index_dados_on_usuarios_id"
+  end
+
+  create_table "usuarios", force: :cascade do |t|
+    t.string "email", null: false
+    t.string "nome", null: false
+    t.string "username", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "dados", "usuarios", column: "usuarios_id"
 end

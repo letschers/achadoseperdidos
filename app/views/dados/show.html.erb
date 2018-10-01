@@ -15,7 +15,7 @@
 			<h6> <%= t(:description) %>: <%= @dado.descricao %></h6>
 			<h6> <%= t(:type) %>: <%= t(@dado.tipo) %></h6>
 			<h6> <%= t(:dateOcurred) %>: <%= @dado.dataocorrido %></h6>
-			<h6> <%= t(:applicant) %>: <%= @dado.pessoa %></h6>
+			<h6> <%= t(:applicant) %>: <%= @usuario.pessoa %></h6>
 			<h6> <%= t(:stat) %>: <%= t(@dado.status_text) %></h6>
 		</div>
 		<div class="panel-footer text-center"><%= link_to( t(:edit), edit_dado_path(@dado), {class: "btn btn-danger"}) %> 

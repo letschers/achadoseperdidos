@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   get 'achados' => 'dados#achados', as: :achados
   get 'perdidos' => 'dados#perdidos', as: :perdidos
-  get 'login' => 'pessoa#login', as: :login
+  get 'login' => 'pessoas#login', as: :login
+  post 'autenticacao' => 'pessoas#authenticate', as: :autenticacao
+  get 'logout' => 'pessoas#logout', as: :logout
 
 end

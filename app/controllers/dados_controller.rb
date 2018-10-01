@@ -24,9 +24,6 @@ class DadosController < ApplicationController
   # GET /dados/1.json
   def show
     
-    a = doLogin('mestre.yoda', 'Labrun00')
-    
-    binding.pry
   end
 
   # GET /dados/new

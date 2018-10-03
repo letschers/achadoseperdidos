@@ -3,7 +3,9 @@ class PessoasController < ApplicationController
 	include Ifosorioapi
 
 	def login
-
+		unless user_in.nil?
+			redirect_to root_path
+		end
 	end
 
 	def authenticate
@@ -42,16 +44,14 @@ class PessoasController < ApplicationController
 			redirect_to root_path
 
 		end 
-		
-
 	end
-
 
 	def logout
 
 		session.delete(:user)
-
+		redirect_to root_path
 	end
+
 
 end
 

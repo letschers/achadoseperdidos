@@ -25,8 +25,8 @@ ActiveRecord::Schema.define(version: 2018_09_28_145106) do
     t.boolean "status", default: true, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "usuarios_id"
-    t.index ["usuarios_id"], name: "index_dados_on_usuarios_id"
+    t.bigint "usuario_id"
+    t.index ["usuario_id"], name: "index_dados_on_usuario_id"
   end
 
   create_table "usuarios", force: :cascade do |t|
@@ -37,5 +37,5 @@ ActiveRecord::Schema.define(version: 2018_09_28_145106) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "dados", "usuarios", column: "usuarios_id"
+  add_foreign_key "dados", "usuarios"
 end

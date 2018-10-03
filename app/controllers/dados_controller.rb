@@ -28,17 +28,27 @@ class DadosController < ApplicationController
 
   # GET /dados/new
   def new
+
     @dado = Dado.new
   end
 
   # GET /dados/1/edit
   def edit
+
+    unless user_in == @dado.usuario
+      redirect_to @dado
+
+    end
+
+
+
   end
 
   # POST /dados
   # POST /dados.json
   def create
     @dado = Dado.new(dado_params)
+    @dado.usuario = user_in
 
     respond_to do |format|
       if @dado.save

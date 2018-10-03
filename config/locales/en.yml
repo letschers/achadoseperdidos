@@ -49,6 +49,7 @@ en:
   achados: "Found"
   perdidos: "Lost"
   login: "Login"
+  logout: "Logout"
   edit: "Edit"
   back: "Back"
   create: "Create"

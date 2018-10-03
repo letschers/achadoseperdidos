@@ -11,7 +11,7 @@ class CreateUsuarios < ActiveRecord::Migration[5.2]
 
 		remove_column :dados, :pessoa, :string,  null: false
 
-		add_reference :dados, :usuarios, index: true, foreign_key: true
+		add_reference :dados, :usuario, index: true, foreign_key: true
 
 	end
 end

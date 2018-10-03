@@ -245,6 +245,7 @@ pt:
   new: "Novo"
   achados: "Achados"
   perdidos: "Perdidos"
-  login: "Login"
+  login: "Entrar"
+  logout: "Sair"
 
   errorCreating: "Houveram alguns erros no preenchimento dos campos:"

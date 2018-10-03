@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
 
-	before_action :set_locale, :current_user
+	before_action :set_locale, :user_in
 
 	def set_locale
 		unless params[:locale].blank?
@@ -14,21 +14,19 @@ class ApplicationController < ActionController::Base
 	end
 
 	def authorized?
-		if session[:username].blank?
-			false
-		else
-			true
-		end
+		session[:user].blank? ? false : true
 	end	
 
-	def current_user
+	def user_in
+		@current_user = nil
+
 		if authorized?
-			pessoa = Pessoa.find_by_cpf(session[:user][:cpf])
+			pessoa = Usuario.find_by_username(session[:user]['username'])
 
 			@current_user  = pessoa
-		else
-			@current_user = nil
 		end
+
+		@current_user
 	end
 
 

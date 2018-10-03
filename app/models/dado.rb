@@ -1,5 +1,6 @@
 class Dado < ApplicationRecord
 
+
 	belongs_to :usuario
 
 	mount_uploader :foto, FotoUploader
@@ -30,4 +31,15 @@ class Dado < ApplicationRecord
 			"fechado"
 		end 
 	end
+
+	def isOwner(usuario)
+		
+		if usuario == @dado.usuario
+			true
+
+		else 
+			false
+	end
+
+
 end 

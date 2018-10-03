@@ -27,7 +27,14 @@
             <%= link_to t(:perdidos), perdidos_path %> 
           </li>
           <li class="<%= menuActive(login_path) %>"> 
+
+            <% if @current_user.nil? %>
             <%= link_to t(:login), login_path %> 
+            
+            <% else %>
+            <%= link_to t(:logout), logout_path %> 
+
+            <% end %>
           </li>
 
         </ul>

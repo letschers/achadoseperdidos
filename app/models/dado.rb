@@ -34,12 +34,17 @@ class Dado < ApplicationRecord
 
 	def isOwner(usuario)
 		
-		if usuario == @dado.usuario
+		if usuario.nil? 
+			false
+
+		elsif usuario == self.usuario
 			true
 
 		else 
 			false
+		
+		end
 	end
 
 
-end 
+end  

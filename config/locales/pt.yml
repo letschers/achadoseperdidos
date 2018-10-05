@@ -237,6 +237,8 @@ pt:
   emaberto: "Em aberto"
   fechado: "Fechado"
 
+  loginFail: "Login ou senha incorreto(s)"
+
   seeMore: "Veja Mais"
   edit: "Editar"
   back: "Voltar"

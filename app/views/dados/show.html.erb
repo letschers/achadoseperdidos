@@ -20,6 +20,9 @@
 		</div>
 		<div class="panel-footer text-center"><%= link_to( t(:edit), edit_dado_path(@dado), {class: "btn btn-danger"}) if @dado.isOwner(@current_user)%> 
 			<%= link_to( t(:back), dados_path, {class: "btn btn-success"}) %>
+
+			<%= link_to 'Destroy', @dado, :confirm => 'Are you sure?',
+                                     :method => :delete if @dado.isOwner(@current_user) %>
 		</div>
 	</div>
 

@@ -37,7 +37,7 @@ class PessoasController < ApplicationController
 
 		if session[:user].blank?
 			session.delete(:user)
-			redirect_to login_path
+			redirect_to login_path(message: "loginFail")
 			
 		else 
 

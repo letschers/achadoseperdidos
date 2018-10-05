@@ -1,6 +1,14 @@
 <%= form_tag(autenticacao_path, class: "col-md-6 col-md-offset-3 form-horizontal", method: "post") do |f| %>
 
 <fieldset>
+
+  <% if params[:message].nil? %>
+
+  <% else %>
+    <div class="alert alert-danger" role="alert"> <%= t(params[:message]) %> </div>
+
+  <% end %>
+
   <legend><%= t(:login) %> - Achados e Perdidos </legend>
   <div class="center-block">
     <div class="form-group">

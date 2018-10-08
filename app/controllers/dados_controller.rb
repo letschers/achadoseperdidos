@@ -1,23 +1,38 @@
 class DadosController < ApplicationController
-  before_action :set_dado, only: [:show, :edit, :update, :destroy]
+  before_action :set_dado, only: [:show, :archive, :edit, :update, :destroy]
 
   include Ifosorioapi
   # GET /dados
   # GET /dados.json
   def index   
-    @dados = Dado.all
+    @dados = Dado.where(status: true)
+  end
+
+  def archive
+    @dado.status = false
+    @dado.save
+
+    redirect_to root_path    
+
   end
 
   def achados
-    @dados = Dado.where(tipo: "achado")
+    @dados = Dado.where(tipo: "achado", status: true)
 
     render 'index'
   end
 
   def perdidos  
-    @dados = Dado.where(tipo: "perdido") 
+    @dados = Dado.where(tipo: "perdido", status: true) 
 
     render 'index'
+  end
+
+  def arquivados
+    @dados = Dado.where(status: false)
+
+    render 'index'
+
   end
 
   # GET /dados/1

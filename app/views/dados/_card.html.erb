@@ -4,7 +4,7 @@
 			<h4 class="panel-title"><%= dado.titulo.upcase %></h4>
 		</div>
 		<div class="panel-body">
-			<h2><%=image_tag dado.foto.thumb.to_s %></h2>
+			<h2><%=image_tag dado.foto.thumb.to_s, class: "img-responsive" %></h2>
 			<h6> <%= t(:reward) %>: <%= dado.recompensa%></h6>
 			<h6> <%= t(:description) %>: <%= truncate(dado.descricao, length: 30) %></h6>
 			<%= link_to(t(:seeMore), dado, {class: "btn btn-danger"}) %>

@@ -236,6 +236,7 @@ pt:
 
   emaberto: "Em aberto"
   fechado: "Fechado"
+  areSure: "Você tem certeza?"
 
   loginFail: "Login ou senha incorreto(s)"
 
@@ -243,11 +244,15 @@ pt:
   edit: "Editar"
   back: "Voltar"
   create: "Criar"
+  close: "Fechar"
 
   new: "Novo"
   achados: "Achados"
   perdidos: "Perdidos"
   login: "Entrar"
   logout: "Sair"
+  dadoCreated: "Criado com Sucesso!"
+  dadoUpdated: "Atualizado com Sucesso!"
+  dadoDestroyed: "Destruído com Sucesso!"
 
   errorCreating: "Houveram alguns erros no preenchimento dos campos:"

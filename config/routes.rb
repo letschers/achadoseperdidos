@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :dados do 
+  resources :dados, except: :destroy do 
 
   	member do 
 

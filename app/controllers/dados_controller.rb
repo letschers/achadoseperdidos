@@ -67,7 +67,7 @@ class DadosController < ApplicationController
 
     respond_to do |format|
       if @dado.save
-        format.html { redirect_to @dado, notice: 'Dado was successfully created.' }
+        format.html { redirect_to @dado, notice: I18n.t(:dadoCreated) }
         format.json { render :show, status: :created, location: @dado }
       else
         format.html { render :new }
@@ -81,7 +81,7 @@ class DadosController < ApplicationController
   def update
     respond_to do |format|
       if @dado.update(dado_params)
-        format.html { redirect_to @dado, notice: 'Dado was successfully updated.' }
+        format.html { redirect_to @dado, notice: I18n.t(:dadoUpdated) }
         format.json { render :show, status: :ok, location: @dado }
       else
         format.html { render :edit }
@@ -92,13 +92,6 @@ class DadosController < ApplicationController
 
   # DELETE /dados/1
   # DELETE /dados/1.json
-  def destroy
-    @dado.destroy
-    respond_to do |format|
-      format.html { redirect_to dados_url, notice: 'Dado was successfully destroyed.' }
-      format.json { head :no_content }
-    end
-  end
 
   private
     # Use callbacks to share common setup or constraints between actions.

@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<p id="notice" class="alert"><%= notice %></p>
 
 <div class="col-md-6 col-md-offset-3">
 	<div class="panel panel-primary">
@@ -21,10 +21,12 @@
 		<div class="panel-footer text-center">
 			<%= link_to( t(:edit), edit_dado_path(@dado), {class: "btn btn-danger"}) if @dado.isOwner(@current_user)%> 
 			<%= link_to( t(:back), dados_path, {class: "btn btn-success"}) %>
-			<%= link_to 'Fechar', archive_dado_path(@dado), {class: "btn btn-danger", data: {:confirm => 'Are you sure?'}} if @dado.isOwner(@current_user)%>
+			<%= link_to t(:close), archive_dado_path(@dado), {class: "btn btn-danger", data: {:confirm => t(:areSure)}} if @dado.isOwner(@current_user)%>
 		</div>
 	</div> 
 
 </div>
+
+<%# image_tag %>
 
 
